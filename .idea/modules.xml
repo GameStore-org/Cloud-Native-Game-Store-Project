@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Cloud-Native-Game-Store-Project.iml" filepath="$PROJECT_DIR$/.idea/Cloud-Native-Game-Store-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/game-store/game-store.iml" filepath="$PROJECT_DIR$/game-store/game-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/invoice-service/invoice-service.iml" filepath="$PROJECT_DIR$/invoice-service/invoice-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/level-up-service/level-up-service.iml" filepath="$PROJECT_DIR$/level-up-service/level-up-service.iml" />
     </modules>
   </component>
 </project>
