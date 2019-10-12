@@ -32,9 +32,9 @@ public class LevelUpService {
 
     public LevelUp getLevelUpByCustomerId(int customerId){
 
-        LevelUp levelByCustomerId=levelUpClient.getLevelUpPointsByCustomerId(customerId);
+        List<LevelUp> levelByCustomerId=levelUpClient.getAllLevelUpsByCustomerId(customerId);
 
-        return levelByCustomerId;
+        return (LevelUp) levelByCustomerId;
     }
 
 
@@ -44,9 +44,9 @@ public class LevelUpService {
         return levels;
     }
 
-    public void updateLevel(int levelUpId, LevelUp levelUp){
+    public void updateLevel(LevelUp levelUp, int levelUpId){
 
-        levelUpClient.updateLevelUp(levelUpId, levelUp);
+        levelUpClient.updateLevelUp(levelUp, levelUpId);
     }
 
     public void deleteLevel(int levelUpId){
