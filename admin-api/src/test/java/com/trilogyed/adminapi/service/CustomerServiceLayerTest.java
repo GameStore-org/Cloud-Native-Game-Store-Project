@@ -36,134 +36,145 @@ public class CustomerServiceLayerTest {
         customer.setEmail("eli@gmail.com");
         customer.setPhone("123-456-789");
 
-        Customer savedCustomer = new Customer();
-        savedCustomer.setCustomerId(1);
-        savedCustomer.setFirstName("Nisa");
-        savedCustomer.setLastName("Cani");
-        savedCustomer.setStreet("35th street");
-        savedCustomer.setCity("Astoria");
-        savedCustomer.setZip("11106");
-        savedCustomer.setEmail("eli@gmail.com");
-        savedCustomer.setPhone("123-456-789");
+        Customer customer1 = new Customer();
+        customer1.setCustomerId(1);
+        customer1.setFirstName("Nisa");
+        customer1.setLastName("Cani");
+        customer1.setStreet("35th street");
+        customer1.setCity("Astoria");
+        customer1.setZip("11106");
+        customer1.setEmail("eli@gmail.com");
+        customer1.setPhone("123-456-789");
 
-        Customer anotherCustomer = new Customer();
-        anotherCustomer.setCustomerId(2);
-        anotherCustomer.setFirstName("Nisa");
-        anotherCustomer.setLastName("Cani");
-        anotherCustomer.setStreet("35th street");
-        anotherCustomer.setCity("Astoria");
-        anotherCustomer.setZip("11106");
-        anotherCustomer.setEmail("eli@gmail.com");
-        anotherCustomer.setPhone("123-456-789");
+        Customer customer2 = new Customer();
+        customer2.setCustomerId(2);
+        customer2.setFirstName("Nisa");
+        customer2.setLastName("Cani");
+        customer2.setStreet("35th street");
+        customer2.setCity("Astoria");
+        customer2.setZip("11106");
+        customer2.setEmail("eli@gmail.com");
+        customer2.setPhone("123-456-789");
 
         List<Customer> customerList = new ArrayList<>();
-        customerList.add(savedCustomer);
-        customerList.add(anotherCustomer);
+        customerList.add(customer1);
+        customerList.add(customer2);
 
-        Customer updateCustomer = new Customer();
-        updateCustomer.setCustomerId(3);
-        updateCustomer.setFirstName("Joanne");
-        updateCustomer.setLastName("Cani");
-        updateCustomer.setStreet("Central 35th street");
-        updateCustomer.setCity("Astoria");
-        updateCustomer.setZip("10014");
-        updateCustomer.setEmail("eli@gmail.com");
-        updateCustomer.setPhone("123-456-789");
+        //updated customer
+        Customer customer3 = new Customer();
+        customer3.setCustomerId(3);
+        customer3.setFirstName("Joanne");
+        customer3.setLastName("Cani");
+        customer3.setStreet("Central 35th street");
+        customer3.setCity("Astoria");
+        customer3.setZip("10014");
+        customer3.setEmail("eli@gmail.com");
+        customer3.setPhone("123-456-789");
 
-        Customer deleteCustomer = new Customer();
-        deleteCustomer.setCustomerId(4);
-        deleteCustomer.setFirstName("Nisa");
-        deleteCustomer.setLastName("Cani");
-        deleteCustomer.setStreet("35th street");
-        deleteCustomer.setCity("Astoria");
-        deleteCustomer.setZip("11106");
-        deleteCustomer.setEmail("eli@gmail.com");
-        deleteCustomer.setPhone("123-456-789");
+        //deleted customer
+        Customer customer4 = new Customer();
+        customer4.setCustomerId(4);
+        customer4.setFirstName("Nisa");
+        customer4.setLastName("Cani");
+        customer4.setStreet("35th street");
+        customer4.setCity("Astoria");
+        customer4.setZip("11106");
+        customer4.setEmail("eli@gmail.com");
+        customer4.setPhone("123-456-789");
+
+
 
         LevelUp levelUp = new LevelUp();
         levelUp.setCustomerId(1);
         levelUp.setPoints(0);
         levelUp.setMemberDate(LocalDate.now());
 
-        LevelUp savedLevelUp = new LevelUp();
-        savedLevelUp.setLevelUpId(1010);
-        savedLevelUp.setCustomerId(1);
-        savedLevelUp.setPoints(0);
-        savedLevelUp.setMemberDate(LocalDate.now());
+        LevelUp levelUp2 = new LevelUp();
+        levelUp2.setLevelUpId(1010);
+        levelUp2.setCustomerId(1);
+        levelUp2.setPoints(0);
+        levelUp2.setMemberDate(LocalDate.now());
 
-        LevelUp anotherLevelUp = new LevelUp();
-        anotherLevelUp.setLevelUpId(1020);
-        anotherLevelUp.setCustomerId(2);
-        anotherLevelUp.setPoints(0);
-        anotherLevelUp.setMemberDate(LocalDate.now());
+        LevelUp levelUp3 = new LevelUp();
+        levelUp3.setLevelUpId(1020);
+        levelUp3.setCustomerId(2);
+        levelUp3.setPoints(0);
+        levelUp3.setMemberDate(LocalDate.now());
 
         List<LevelUp> levelUpList = new ArrayList<>();
-        levelUpList.add(savedLevelUp);
-        levelUpList.add(anotherLevelUp);
+        levelUpList.add(levelUp2);
+        levelUpList.add(levelUp3);
 
         List<LevelUp> levelUpListByCustomerId1 = new ArrayList<>();
-        levelUpListByCustomerId1.add(savedLevelUp);
+        levelUpListByCustomerId1.add(levelUp2);
 
         List<LevelUp> levelUpListByCustomerId2 = new ArrayList<>();
-        levelUpListByCustomerId2.add(anotherLevelUp);
+        levelUpListByCustomerId2.add(levelUp3);
 
-        LevelUp updateLevelUp = new LevelUp();
-        updateLevelUp.setLevelUpId(1030);
-        updateLevelUp.setCustomerId(3);
-        updateLevelUp.setPoints(100);
-        updateLevelUp.setMemberDate(LocalDate.now());
+        //updated levelUp
+        LevelUp levelUp4 = new LevelUp();
+        levelUp4.setLevelUpId(1030);
+        levelUp4.setCustomerId(3);
+        levelUp4.setPoints(100);
+        levelUp4.setMemberDate(LocalDate.now());
 
         List<LevelUp> levelUpListByUpdatedCustomerId = new ArrayList<>();
-        levelUpListByUpdatedCustomerId.add(updateLevelUp);
+        levelUpListByUpdatedCustomerId.add(levelUp4);
 
-        LevelUp deleteLevelUp = new LevelUp();
-        deleteLevelUp.setLevelUpId(1040);
-        deleteLevelUp.setCustomerId(4);
-        deleteLevelUp.setPoints(40);
-        deleteLevelUp.setMemberDate(LocalDate.now());
+        //deleted levelUp
+        LevelUp levelUp5 = new LevelUp();
+        levelUp5.setLevelUpId(1040);
+        levelUp5.setCustomerId(4);
+        levelUp5.setPoints(40);
+        levelUp5.setMemberDate(LocalDate.now());
 
-        doReturn(savedCustomer).when(customerClient).createCustomer(customer);
-        doReturn(savedCustomer).when(customerClient).getCustomer(1);
+        doReturn(customer1).when(customerClient).createCustomer(customer);
+        doReturn(customer1).when(customerClient).getCustomer(1);
         doReturn(customerList).when(customerClient).getAllCustomers();
-        doReturn(anotherCustomer).when(customerClient).getCustomer(2);
-        doNothing().when(customerClient).updateCustomer(updateCustomer.getCustomerId(),updateCustomer);
-        doReturn(updateCustomer).when(customerClient).getCustomer(3);
+        doReturn(customer2).when(customerClient).getCustomer(2);
+
+
+        doNothing().when(customerClient).updateCustomer(customer3.getCustomerId(),customer3);
+        doReturn(customer3).when(customerClient).getCustomer(3);
         doNothing().when(customerClient).deleteCustomer(40);
         doReturn(null).when(customerClient).getCustomer(4);
 
-        doReturn(savedLevelUp).when(levelUpClient).createLevelUp(levelUp);
-        doReturn(savedLevelUp).when(levelUpClient).getLevelUp(1010);
+        doReturn(levelUp2).when(levelUpClient).createLevelUp(levelUp);
+        doReturn(levelUp2).when(levelUpClient).getLevelUp(1010);
         doReturn(levelUpList).when(levelUpClient).getAllLevelUps();
         doReturn(levelUpListByCustomerId1).when(levelUpClient).getAllLevelUpsByCustomerId(1);
         doReturn(levelUpListByCustomerId2).when(levelUpClient).getAllLevelUpsByCustomerId(2);
-        doNothing().when(levelUpClient).updateLevelUp(updateLevelUp, updateLevelUp.getLevelUpId());
+
+        doNothing().when(levelUpClient).updateLevelUp(levelUp4, levelUp4.getLevelUpId());
         doReturn(levelUpListByUpdatedCustomerId).when(levelUpClient).getAllLevelUpsByCustomerId(3);
+
         doNothing().when(levelUpClient).deleteLevelUp(40);
         doReturn(null).when(levelUpClient).getAllLevelUpsByCustomerId(4);
         doNothing().when(levelUpClient).deleteLevelUp(40);
         doReturn(null).when(levelUpClient).getAllLevelUps();
 
+
         sl = new CustomerService(customerClient, levelUpClient);
 
         //create a new Customer with LevelUp
-        CustomerViewModel addingCustomer = sl.createCustomer(customer);
-        CustomerViewModel fetchCustomerAdded = sl.getCustomer(addingCustomer.getCustomerId());
-        assertEquals(addingCustomer, fetchCustomerAdded);
+        CustomerViewModel customerViewModel = sl.createCustomer(customer);
+        CustomerViewModel customerAdded = sl.getCustomer(customerViewModel.getCustomerId());
+        assertEquals(customerViewModel, customerAdded);
 
 
-        List<CustomerViewModel> cvmList = sl.getAllCustomers();
-        assertEquals(cvmList.size(), 2);
+        List<CustomerViewModel> customerViewModelList = sl.getAllCustomers();
+        assertEquals(customerViewModelList.size(), 2);
 
         //update Customer and LevelUp
-        CustomerViewModel getCustomerVM = sl.getCustomer(3);
-        sl.updateCustomer(getCustomerVM);
-        CustomerViewModel fetchUpdatedCustomer = sl.getCustomer(getCustomerVM.getCustomerId());
-        assertEquals(getCustomerVM, fetchUpdatedCustomer);
+        CustomerViewModel customerViewModel1 = sl.getCustomer(3);
+        sl.updateCustomer(customerViewModel1);
+        CustomerViewModel updatedCustomerVm = sl.getCustomer(customerViewModel1.getCustomerId());
+        assertEquals(customerViewModel1, updatedCustomerVm);
 
         //delete Customer
         sl.deleteCustomer(4);
-        CustomerViewModel cvmDeleted = sl.getCustomer(4);
-        assertNull(cvmDeleted);
+        CustomerViewModel customerViewModel2 = sl.getCustomer(4);
+        assertEquals(null, customerViewModel2);
 
         //delete LevelUp
         sl.deleteCustomer(1040);

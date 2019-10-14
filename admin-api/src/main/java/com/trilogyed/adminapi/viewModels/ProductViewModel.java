@@ -11,7 +11,7 @@ public class ProductViewModel {
     private BigDecimal listPrice;
     private BigDecimal unitCost;
     private int inventoryId;
-    private int quantityInInvetory;
+    private int quantityInInventory;
 
     public int getProductId() {
         return productId;
@@ -61,12 +61,12 @@ public class ProductViewModel {
         this.inventoryId = inventoryId;
     }
 
-    public int getQuantityInInvetory() {
-        return quantityInInvetory;
+    public int getQuantityInInventory() {
+        return quantityInInventory;
     }
 
-    public void setQuantityInInvetory(int quantityInInvetory) {
-        this.quantityInInvetory = quantityInInvetory;
+    public void setQuantityInInventory(int quantityInInventory) {
+        this.quantityInInventory = quantityInInventory;
     }
 
     @Override
@@ -76,7 +76,7 @@ public class ProductViewModel {
         ProductViewModel that = (ProductViewModel) o;
         return productId == that.productId &&
                 inventoryId == that.inventoryId &&
-                quantityInInvetory == that.quantityInInvetory &&
+                quantityInInventory == that.quantityInInventory &&
                 productName.equals(that.productName) &&
                 productDescription.equals(that.productDescription) &&
                 listPrice.equals(that.listPrice) &&
@@ -85,6 +85,6 @@ public class ProductViewModel {
 
     @Override
     public int hashCode() {
-        return Objects.hash(productId, productName, productDescription, listPrice, unitCost, inventoryId, quantityInInvetory);
+        return Objects.hash(productId, productName, productDescription, listPrice, unitCost, inventoryId, quantityInInventory);
     }
 }

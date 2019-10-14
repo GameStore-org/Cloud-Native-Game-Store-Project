@@ -8,6 +8,7 @@ import com.trilogyed.adminapi.util.feign.CustomerClient;
 import com.trilogyed.adminapi.util.feign.InventoryClient;
 import com.trilogyed.adminapi.util.feign.InvoiceClient;
 import com.trilogyed.adminapi.util.feign.ProductClient;
+import com.trilogyed.adminapi.viewModels.CustomerViewModel;
 import com.trilogyed.adminapi.viewModels.InvoiceItemViewModel;
 import com.trilogyed.adminapi.viewModels.InvoiceViewModel;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,25 +22,25 @@ public class InvoiceService {
     private InvoiceClient invoiceClient;
     private ProductClient productClient;
     private InventoryClient inventoryClient;
-    private CustomerClient customerClient;
+    private CustomerService customerService;
 
-    public InvoiceService(InvoiceClient invoiceClient,ProductClient productClient, InventoryClient inventoryClient, CustomerClient customerClient){
+    public InvoiceService(InvoiceClient invoiceClient,ProductClient productClient, InventoryClient inventoryClient, CustomerService customerService){
 
         this.invoiceClient=invoiceClient;
         this.productClient=productClient;
         this.inventoryClient=inventoryClient;
-        this.customerClient= customerClient;
+        this.customerService= customerService;
     }
 
     @Transactional
     public InvoiceViewModel createInvoice(InvoiceViewModel ivm){
-        List<InvoiceItemViewModel> itList = ivm.getInvoiceItemList();
+        List<InvoiceItem> itList = ivm.getInvoiceItemList();
         List<InvoiceItem> iiList = new ArrayList<>();
 
-        Invoice invoice=new Invoice();
+        InvoiceViewModel invoice=new InvoiceViewModel();
         invoice.setInvoiceId(ivm.getInvoiceId());
 
-            for (InvoiceItemViewModel it : itList) {
+            for (InvoiceItem it : itList) {
 
                 Inventory inventory = inventoryClient.getInventory(it.getInventoryId());
                 if (it.getQuantity() <= inventory.getQuantity()) {
@@ -84,7 +85,7 @@ public class InvoiceService {
         InvoiceViewModel ivm = invoiceClient.getInvoice(invoiceViewModel.getInvoiceId());
         ivm.setCustomerId(invoiceViewModel.getCustomerId());
         ivm.setPurchaseDate(invoiceViewModel.getPurchaseDate());
-        List<InvoiceItemViewModel> iivmList = invoiceViewModel.getInvoiceItemList();
+        List<InvoiceItem> iivmList = invoiceViewModel.getInvoiceItemList();
 
         List<InvoiceItem> iiList = new ArrayList<>();
 
@@ -98,29 +99,28 @@ public class InvoiceService {
 
     // Helper Method - Building the InvoiceViewModel
 
-    public InvoiceViewModel buildInvoiceViewModel(InvoiceViewModel ivm)
-    {
+    public InvoiceViewModel buildInvoiceViewModel(InvoiceViewModel ivm){
+
         if (ivm==null) return null;
-        InvoiceViewModel iViewModel = new InvoiceViewModel();
+    final BigDecimal[] total = {new BigDecimal("0.00")};
+    InvoiceViewModel iViewModel = new InvoiceViewModel();
         iViewModel.setInvoiceId(ivm.getInvoiceId());
         iViewModel.setPurchaseDate(ivm.getPurchaseDate());
-        List<InvoiceItemViewModel>  invoiceItemList = ivm.getInvoiceItemList();
-        List<InvoiceItemViewModel> iivmList = new ArrayList<>();
-
-        final BigDecimal[] total = {new BigDecimal("0.00")};
-        invoiceItemList.stream().forEach(invoiceItem -> {
-            InvoiceItem invItem= new InvoiceItem();
-            invItem.setInvoiceItemId(ivm.getInvoiceId());
-            InvoiceItemViewModel iivm = buildInvoiceItemViewModel(invItem);
-            total[0] = iivm.getSubtotal().add(total[0]);
-            iivmList.add(iivm);
-        });
-
-        iViewModel.setInvoiceItemList(iivmList);
-        Customer customer = customerClient.getCustomer(ivm.getCustomerId());
-        iViewModel.setCustomerId(customer.getCustomerId());
-        return iViewModel;
+    List<InvoiceItem>  invoiceItemList = ivm.getInvoiceItemList();
+    List<InvoiceItem> iivmList = new ArrayList<>();
+        for(InvoiceItem invoiceItem:invoiceItemList){
+        InvoiceItem iivm = invoiceItem;
+        iivmList.add(iivm);
     }
+        iViewModel.setInvoiceItemList(iivmList);
+//        tivm.setTotal(total[0]);
+    CustomerViewModel cvm = customerService.getCustomer(ivm.getCustomerId());
+//        cvm.setPoints(calculatePoints(total[0]));
+        customerService.updateCustomer(cvm);
+        iViewModel.setCustomerId(cvm.getCustomerId());
+        return iViewModel;
+}
+
 
 
     //helper methods

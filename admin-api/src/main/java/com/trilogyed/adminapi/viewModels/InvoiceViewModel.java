@@ -2,6 +2,7 @@ package com.trilogyed.adminapi.viewModels;
 
 import com.trilogyed.adminapi.model.InvoiceItem;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,8 +10,8 @@ public class InvoiceViewModel {
 
     private int invoiceId;
     private int customerId;
-    private int purchaseDate;
-    List<InvoiceItemViewModel> invoiceItemList;
+    private LocalDate purchaseDate;
+    List<InvoiceItem> invoiceItemList;
 
     public int getInvoiceId() {
         return invoiceId;
@@ -28,19 +29,19 @@ public class InvoiceViewModel {
         this.customerId = customerId;
     }
 
-    public int getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(int purchaseDate) {
+    public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 
-    public List<InvoiceItemViewModel> getInvoiceItemList() {
+    public List<InvoiceItem> getInvoiceItemList() {
         return invoiceItemList;
     }
 
-    public void setInvoiceItemList(List<InvoiceItemViewModel> invoiceItemList) {
+    public void setInvoiceItemList(List<InvoiceItem> invoiceItemList) {
         this.invoiceItemList = invoiceItemList;
     }
 
@@ -51,7 +52,7 @@ public class InvoiceViewModel {
         InvoiceViewModel that = (InvoiceViewModel) o;
         return invoiceId == that.invoiceId &&
                 customerId == that.customerId &&
-                purchaseDate == that.purchaseDate &&
+                purchaseDate.equals(that.purchaseDate) &&
                 invoiceItemList.equals(that.invoiceItemList);
     }
 
@@ -60,3 +61,5 @@ public class InvoiceViewModel {
         return Objects.hash(invoiceId, customerId, purchaseDate, invoiceItemList);
     }
 }
+
+

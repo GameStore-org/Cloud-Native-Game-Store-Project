@@ -25,40 +25,47 @@ public class ProductService {
     }
 
     @Transactional
-    public ItemViewModel createItem(ItemViewModel ivm)
-    {
+    public ItemViewModel createItem(ItemViewModel ivm){
+
+        //create product
         Product product = new Product();
         product.setProductName(ivm.getProductName());
         product.setProductDescription(ivm.getProductDescription());
         product.setListPrice(ivm.getListPrice());
         product.setUnitCost(ivm.getUnitCost());
         product = productClient.createProduct(product);
-        // Create inventory
+
+        // create inventory
         Inventory inventory = new Inventory();
         inventory.setProductId(ivm.getProductId());
-        if (ivm.getQuantityInInventory()==null) inventory.setQuantity(0);
-        else inventory.setQuantity(ivm.getQuantityInInventory());
+        if (ivm.getQuantityInInventory()==null) {
+            inventory.setQuantity(0);
+        }
+            else
+                inventory.setQuantity(ivm.getQuantityInInventory());
         inventory = inventoryClient.createInventory(inventory);
+
         return buildItemViewModel(product);
     }
 
     @Transactional
-    public ItemViewModel createInventory(Inventory inventory)
-    {
+    public ItemViewModel createInventory(Inventory inventory){
+
         inventory = inventoryClient.createInventory(inventory);
         Product product = productClient.getProduct(inventory.getProductId());
+
         return buildItemViewModel(product);
     }
 
-    public ItemViewModel findItemByProductId(Integer productId)
-    {
+    public ItemViewModel findItemByProductId(Integer productId){
+
         Product product = productClient.getProduct(productId);
         if(product==null) return null;
         return buildItemViewModel(product);
     }
 
-    public List<ItemViewModel> findAllItems()
-    {
+    public List<ItemViewModel> findAllItems(){
+
         List<Product> products = productClient.getAllProducts();
         List<ItemViewModel> ivmList = new ArrayList<>();
         products.stream().forEach(product ->{
@@ -68,16 +75,16 @@ public class ProductService {
         return ivmList;
     }
 
-    public ItemViewModel findItemByInventoryId(Integer inventoryId)
-    {
+    public ItemViewModel findItemByInventoryId(Integer inventoryId){
+
         Inventory inventory = inventoryClient.getInventory(inventoryId);
         Product product = productClient.getProduct(inventory.getProductId());
         if (product==null) return null;
         return buildItemViewModel(product);
     }
 
-    public void updateItemOrInventory(ItemViewModel ivm)
-    {
+    public void updateItemOrInventory(ItemViewModel ivm){
+
         Product product = productClient.getProduct(ivm.getProductId());
         product.setProductName(ivm.getProductName());
         product.setProductDescription(ivm.getProductDescription());
@@ -87,8 +94,8 @@ public class ProductService {
         updateInventory(ivm);
     }
 
-    public void updateInventory(ItemViewModel ivm)
-    {
+    public void updateInventory(ItemViewModel ivm){
+
         if (ivm.getInventoryId()!=null) {
             Inventory inventory = inventoryClient.getInventory(ivm.getInventoryId());
             inventory.setQuantity(ivm.getQuantityInInventory());
@@ -96,11 +103,11 @@ public class ProductService {
         }
     }
 
-    public void deleteItem(Integer productId)
-    {
+    public void deleteItem(Integer productId){
+
         List<Inventory> invList = inventoryClient.getInventoryByProductId(productId);
-        if(invList!=null)
-        {
+        if(invList!=null){
+
             invList.stream().forEach(inventory -> {
                 inventoryClient.deleteInventory(inventory.getInventoryId());
             });
@@ -108,7 +115,7 @@ public class ProductService {
         productClient.deleteProduct(productId);
     }
 
-    /** Helper Method - building the ItemViewModel */
+    //helper method
     public ItemViewModel buildItemViewModel(Product product)
     {
         if (product==null) return null;
@@ -126,14 +133,14 @@ public class ProductService {
     }
 
     //Delete extra Inventories
-    public Inventory deleteExtraInventories(List<Inventory> inventoryList)
-    {
+    public Inventory deleteExtraInventories(List<Inventory> inventoryList){
+
         Comparator<Inventory> maxId = Comparator.comparing(Inventory::getInventoryId);
         Inventory maxIdInv = inventoryList.stream().max(maxId).get();
-        for (Inventory inventory: inventoryList)
-        {
-            if(inventory.getInventoryId()!=maxIdInv.getInventoryId())
-            {
+        for (Inventory inventory: inventoryList){
+
+            if(inventory.getInventoryId()!=maxIdInv.getInventoryId()){
+
                 maxIdInv.setQuantity(maxIdInv.getQuantity()+inventory.getQuantity());
                 inventoryClient.deleteInventory(inventory.getInventoryId());
             }

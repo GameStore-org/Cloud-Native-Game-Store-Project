@@ -32,100 +32,115 @@ public class ProductServiceLayerTest {
         product.setListPrice(new BigDecimal("21.21"));
         product.setUnitCost(new BigDecimal("10.10"));
 
-        Product savedProduct = new Product();
-        savedProduct.setProductId(100);
-        savedProduct.setProductName("Anca");
-        savedProduct.setProductDescription("beautiful");
-        savedProduct.setListPrice(new BigDecimal("21.21"));
-        savedProduct.setUnitCost(new BigDecimal("10.10"));
+        Product product1 = new Product();
+        product1.setProductId(100);
+        product1.setProductName("Anca");
+        product1.setProductDescription("beautiful");
+        product1.setListPrice(new BigDecimal("21.21"));
+        product1.setUnitCost(new BigDecimal("10.10"));
 
-        Product anotherProduct = new Product();
-        anotherProduct.setProductId(200);
-        anotherProduct.setProductName("Anca Cani");
-        anotherProduct.setProductDescription("beautiful");
-        anotherProduct.setListPrice(new BigDecimal("21.21"));
-        anotherProduct.setUnitCost(new BigDecimal("10.10"));
+        Product product2 = new Product();
+        product2.setProductId(200);
+        product2.setProductName("Anca Cani");
+        product2.setProductDescription("beautiful");
+        product2.setListPrice(new BigDecimal("21.21"));
+        product2.setUnitCost(new BigDecimal("10.10"));
 
         List<Product> productList = new ArrayList<>();
-        productList.add(savedProduct);
-        productList.add(anotherProduct);
+        productList.add(product1);
+        productList.add(product2);
 
-        Product updateProduct = new Product();
-        updateProduct.setProductId(300);
-        updateProduct.setProductName("Anca");
-        updateProduct.setProductDescription("beautiful");
-        updateProduct.setListPrice(new BigDecimal("21.21"));
-        updateProduct.setUnitCost(new BigDecimal("10.10"));
+        //updated product
+        Product product3 = new Product();
+        product3.setProductId(300);
+        product3.setProductName("Anca");
+        product3.setProductDescription("beautiful");
+        product3.setListPrice(new BigDecimal("21.21"));
+        product3.setUnitCost(new BigDecimal("10.10"));
 
-        Product deleteProduct = new Product();
-        deleteProduct.setProductId(400);
-        deleteProduct.setProductName("Anca");
-        deleteProduct.setProductDescription("beautiful");
-        deleteProduct.setListPrice(new BigDecimal("21.21"));
-        deleteProduct.setUnitCost(new BigDecimal("10.10"));
+
+        //deleted product
+        Product product4 = new Product();
+        product4.setProductId(400);
+        product4.setProductName("Anca");
+        product4.setProductDescription("beautiful");
+        product4.setListPrice(new BigDecimal("21.21"));
+        product4.setUnitCost(new BigDecimal("10.10"));
+
 
         Inventory inventory = new Inventory();
         inventory.setProductId(100);
         inventory.setQuantity(250);
 
-        Inventory savedInventory = new Inventory();
-        savedInventory.setInventoryId(1100);
-        savedInventory.setProductId(100);
-        savedInventory.setQuantity(250);
+        Inventory inventory1 = new Inventory();
+        inventory1.setInventoryId(1100);
+        inventory1.setProductId(100);
+        inventory1.setQuantity(250);
 
-        Inventory anotherInventory = new Inventory();
-        anotherInventory.setInventoryId(2200);
-        anotherInventory.setProductId(200);
-        anotherInventory.setQuantity(300);
+        Inventory inventory2 = new Inventory();
+        inventory2.setInventoryId(2200);
+        inventory2.setProductId(200);
+        inventory2.setQuantity(300);
 
         List<Inventory> invList = new ArrayList<>();
-        invList.add(savedInventory);
-        invList.add(anotherInventory);
+        invList.add(inventory1);
+        invList.add(inventory2);
 
         List<Inventory> invListByProductId0 = new ArrayList<>();
-        invListByProductId0.add(savedInventory);
+        invListByProductId0.add(inventory1);
 
         List<Inventory> invListByProductId = new ArrayList<>();
-        invListByProductId.add(anotherInventory);
+        invListByProductId.add(inventory2);
 
-        Inventory updateInventory = new Inventory();
-        updateInventory.setInventoryId(3300);
-        updateInventory.setProductId(300);
-        updateInventory.setQuantity(250);
+        //updated Inventory
+        Inventory inventory3 = new Inventory();
+        inventory3.setInventoryId(3300);
+        inventory3.setProductId(300);
+        inventory3.setQuantity(250);
 
         List<Inventory> invListByProductId1 = new ArrayList<>();
-        invListByProductId1.add(updateInventory);
+        invListByProductId1.add(inventory3);
 
-        Inventory deleteInventory = new Inventory();
-        deleteInventory.setInventoryId(4400);
-        deleteInventory.setProductId(400);
-        deleteInventory.setQuantity(250);
+        //deleted inventory
+        Inventory inventory4 = new Inventory();
+        inventory4.setInventoryId(4400);
+        inventory4.setProductId(400);
+        inventory4.setQuantity(250);
 
-        doReturn(savedProduct).when(productClient).createProduct(product);
-        doReturn(savedProduct).when(productClient).getProduct(100);
+        doReturn(product1).when(productClient).createProduct(product);
+        doReturn(product1).when(productClient).getProduct(100);
         doReturn(productList).when(productClient).getAllProducts();
-        doReturn(anotherProduct).when(productClient).getProduct(200);
-        doNothing().when(productClient).updateProduct(updateProduct.getProductId(),updateProduct);
-        doReturn(updateProduct).when(productClient).getProduct(300);
+
+
+        doReturn(product2).when(productClient).getProduct(200);
+        doNothing().when(productClient).updateProduct(product3.getProductId(),product3);
+        doReturn(product3).when(productClient).getProduct(300);
+
+
         doNothing().when(productClient).deleteProduct(400);
         doReturn(null).when(productClient).getProduct(400);
 
-        doReturn(savedInventory).when(inventoryClient).createInventory(inventory);
-        doReturn(savedInventory).when(inventoryClient).getInventory(1100);
+        doReturn(inventory1).when(inventoryClient).createInventory(inventory);
+        doReturn(inventory1).when(inventoryClient).getInventory(1100);
         doReturn(invListByProductId0).when(inventoryClient).getInventoryByProductId(100);
         doReturn(invList).when(inventoryClient).getAllInventory();
+
+
         doReturn(invListByProductId).when(inventoryClient).getInventoryByProductId(200);
-        doReturn(anotherInventory).when(inventoryClient).getInventory(2200);
-        doNothing().when(inventoryClient).updateInventory(updateInventory.getInventoryId(),updateInventory);
-        doReturn(updateInventory).when(inventoryClient).getInventory(3300);
+        doReturn(inventory2).when(inventoryClient).getInventory(2200);
+        doNothing().when(inventoryClient).updateInventory(inventory3.getInventoryId(),inventory3);
+        doReturn(inventory3).when(inventoryClient).getInventory(3300);
         doReturn(invListByProductId1).when(inventoryClient).getInventoryByProductId(300);
+
+
         doNothing().when(inventoryClient).deleteInventory(4400);
         doReturn(null).when(inventoryClient).getInventoryByProductId(400);
         doReturn(null).when(inventoryClient).getInventory(4400);
 
+
         sl = new ProductService(productClient, inventoryClient);
 
-        //add inventory */
+        //add inventory
         ItemViewModel ivm = new ItemViewModel();
         ivm.setProductName(product.getProductName());
         ivm.setProductDescription(product.getProductDescription());
@@ -138,25 +153,25 @@ public class ProductServiceLayerTest {
         assertEquals(ivm, ivm1);
 
         // create inventory
-        ItemViewModel ivmCreate = sl.createInventory(inventory);
-        ItemViewModel ivmGetBack = sl.findItemByProductId(ivmCreate.getProductId());
-        assertEquals(ivmCreate, ivmGetBack);
+        ItemViewModel itemViewModel = sl.createInventory(inventory);
+        ItemViewModel itemViewModel1 = sl.findItemByProductId(itemViewModel.getProductId());
+        assertEquals(itemViewModel, itemViewModel1);
 
         // all Items
-        List<ItemViewModel> ivmListAllProducts = sl.findAllItems();
-        assertEquals(ivmListAllProducts.size(), 2);
+        List<ItemViewModel> itemViewModelList = sl.findAllItems();
+        assertEquals(itemViewModelList.size(), 2);
 
         // Item By Inventory Id
-        ItemViewModel ivmFindItem = sl.findItemByInventoryId(1100);
-        ItemViewModel ivmFindByProductId = sl.findItemByProductId(100);
-        assertEquals(ivmFindItem, ivmFindByProductId);
+        ItemViewModel itemViewModel2 = sl.findItemByInventoryId(1100);
+        ItemViewModel itemViewModel3 = sl.findItemByProductId(100);
+        assertEquals(itemViewModel2, itemViewModel3);
 
         // update Item Or Inventory
-        ItemViewModel updateIvm = sl.findItemByProductId(300);
-        sl.updateInventory(updateIvm);
-        ItemViewModel updatedIvm = sl.findItemByProductId(updateIvm.getProductId());
-        assertEquals(updatedIvm, updateIvm);
-        assertEquals(updatedIvm.getQuantityInInventory(), updateIvm.getQuantityInInventory());
+        ItemViewModel itemViewModel4 = sl.findItemByProductId(300);
+        sl.updateInventory(itemViewModel4);
+        ItemViewModel itemViewModel5 = sl.findItemByProductId(itemViewModel4.getProductId());
+        assertEquals(itemViewModel5, itemViewModel4);
+        assertEquals(itemViewModel5.getQuantityInInventory(), itemViewModel4.getQuantityInInventory());
 
         // delete Item
         sl.deleteItem(400);

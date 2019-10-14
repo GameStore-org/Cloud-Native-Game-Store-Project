@@ -43,6 +43,7 @@ public class CustomerService {
     public CustomerViewModel getCustomer(Integer customerId){
 
         Customer customer = customerClient.getCustomer(customerId);
+
         return buildCustomerViewModel(customer);
     }
 
@@ -58,8 +59,8 @@ public class CustomerService {
         return cvmList;
     }
 
-    public void updateCustomer(CustomerViewModel cvm)
-    {
+    public void updateCustomer(CustomerViewModel cvm){
+
         Customer customer = customerClient.getCustomer(cvm.getCustomerId());
         customer.setFirstName(cvm.getFirstName());
         customer.setLastName(cvm.getLastName());
@@ -82,8 +83,8 @@ public class CustomerService {
         customerClient.deleteCustomer(customerId);
     }
 
-    public void deleteLevelUpByLevelUpId(Integer levelUpId)
-    {
+    public void deleteLevelUpByLevelUpId(Integer levelUpId){
+
         levelUpClient.deleteLevelUp(levelUpId);
     }
 
@@ -110,7 +111,7 @@ public class CustomerService {
         return cvm;
     }
 
-    // One customer can have only one levelUp Id */
+    // One customer can have only one points Id */
 
     public LevelUp deleteExtraLevelUps(List<LevelUp> levelUpList){
 

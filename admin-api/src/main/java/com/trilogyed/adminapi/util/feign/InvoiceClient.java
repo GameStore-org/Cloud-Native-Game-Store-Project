@@ -15,7 +15,7 @@ import java.util.List;
 public interface InvoiceClient {
 
     @RequestMapping(value = "/invoices", method = RequestMethod.POST)
-    InvoiceViewModel createInvoice(@RequestBody @Valid Invoice ivm);
+    InvoiceViewModel createInvoice(@RequestBody @Valid InvoiceViewModel ivm);
 
     @RequestMapping(value = "/invoices", method = RequestMethod.GET)
     List<InvoiceViewModel> getAllInvoices();
