@@ -1,4 +1,4 @@
-package com.trilogyed.levelupservice.exception;
+package com.trilogyed.retailapiservice.exception;
 
 /**
  * Exception class to handle not found cases in get APIs

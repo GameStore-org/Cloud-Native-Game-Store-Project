@@ -1,4 +1,9 @@
-package com.trilogyed.levelupservice.model;
+package com.trilogyed.retailapiservice.model;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -13,8 +18,11 @@ public class LevelUp {
     private Integer customerId;
     @NotNull(message = "Please supply points.")
     private Integer points;
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     @NotNull(message = "Please supply a member date.")
     private LocalDate memberDate;
+
 
     public LevelUp() {
     }
@@ -25,6 +33,12 @@ public class LevelUp {
         this.points = points;
         this.memberDate = memberDate;
     }
+    public LevelUp(int customerId, int points, LocalDate memberDate) {
+        this.customerId = customerId;
+        this.points = points;
+        this.memberDate = memberDate;
+    }
+
 
     public int getLevelUpId() {
         return levelUpId;
@@ -43,7 +57,9 @@ public class LevelUp {
     }
 
     public int getPoints() {
-
+        /**
+        to avoid NullPointer
+         */
         if (points == null) {
             return 0;
         }
