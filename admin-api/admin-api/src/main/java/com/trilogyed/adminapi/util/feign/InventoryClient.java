@@ -29,4 +29,7 @@ public interface InventoryClient {
         @RequestMapping(value = "/inventory", method = RequestMethod.GET)
         List<Inventory> getAllInventory();
 
+        @RequestMapping(value = "/inventory/product/{id}", method = RequestMethod.GET)
+        List<Inventory> getInventoryByProductId(@PathVariable int id );
+
     }

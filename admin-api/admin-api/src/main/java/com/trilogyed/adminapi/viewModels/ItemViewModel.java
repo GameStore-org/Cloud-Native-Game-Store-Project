@@ -3,21 +3,21 @@ package com.trilogyed.adminapi.viewModels;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class ProductViewModel {
+public class ItemViewModel {
 
-    private int productId;
+    private Integer productId;
     private String productName;
     private String productDescription;
     private BigDecimal listPrice;
     private BigDecimal unitCost;
-    private int inventoryId;
-    private int quantityInInventory;
+    private Integer inventoryId;
+    private Integer quantityInInventory;
 
-    public int getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 
@@ -53,19 +53,19 @@ public class ProductViewModel {
         this.unitCost = unitCost;
     }
 
-    public int getInventoryId() {
+    public Integer getInventoryId() {
         return inventoryId;
     }
 
-    public void setInventoryId(int inventoryId) {
+    public void setInventoryId(Integer inventoryId) {
         this.inventoryId = inventoryId;
     }
 
-    public int getQuantityInInventory() {
+    public Integer getQuantityInInventory() {
         return quantityInInventory;
     }
 
-    public void setQuantityInInventory(int quantityInInventory) {
+    public void setQuantityInInventory(Integer quantityInInventory) {
         this.quantityInInventory = quantityInInventory;
     }
 
@@ -73,14 +73,14 @@ public class ProductViewModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProductViewModel that = (ProductViewModel) o;
-        return productId == that.productId &&
-                inventoryId == that.inventoryId &&
-                quantityInInventory == that.quantityInInventory &&
-                productName.equals(that.productName) &&
-                productDescription.equals(that.productDescription) &&
-                listPrice.equals(that.listPrice) &&
-                unitCost.equals(that.unitCost);
+        ItemViewModel that = (ItemViewModel) o;
+        return Objects.equals(productId, that.productId) &&
+                Objects.equals(productName, that.productName) &&
+                Objects.equals(productDescription, that.productDescription) &&
+                Objects.equals(listPrice, that.listPrice) &&
+                Objects.equals(unitCost, that.unitCost) &&
+                Objects.equals(inventoryId, that.inventoryId) &&
+                Objects.equals(quantityInInventory, that.quantityInInventory);
     }
 
     @Override

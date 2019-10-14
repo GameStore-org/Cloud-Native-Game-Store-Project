@@ -37,7 +37,7 @@ public class LevelUpController {
         if (id != levelUp.getLevelUpId()) {
             throw new IllegalArgumentException("ID on path must match the ID in the LevelUp object");
         }
-        levelUpService.updateLevel(id, levelUp);
+        levelUpService.updateLevel(levelUp, id);
     }
 
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.DELETE)

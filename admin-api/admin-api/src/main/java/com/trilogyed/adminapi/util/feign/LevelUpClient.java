@@ -1,6 +1,5 @@
 package com.trilogyed.adminapi.util.feign;
 
-import com.trilogyed.adminapi.model.Invoice;
 import com.trilogyed.adminapi.model.LevelUp;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +20,7 @@ public interface LevelUpClient {
     LevelUp getLevelUp(@PathVariable int id);
 
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.PUT)
-    void updateLevelUp(@PathVariable int id, @RequestBody @Valid LevelUp levelUp);
+     void updateLevelUp(@RequestBody LevelUp levelUp, @PathVariable int id);
 
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.DELETE)
     void deleteLevelUp(@PathVariable int id);
@@ -29,8 +28,8 @@ public interface LevelUpClient {
     @RequestMapping(value = "/levelups", method = RequestMethod.GET)
     List<LevelUp> getAllLevelUps();
 
-    @RequestMapping(value = "/levelups/customer/{id}", method = RequestMethod.GET)
-    Integer getLevelUpPointsByCustomerId(@PathVariable int id);
+    @RequestMapping(value = "/levelups/customerId/{customerId}", method = RequestMethod.GET)
+    List<LevelUp> getAllLevelUpsByCustomerId(@PathVariable int customerId);
 
 
 }

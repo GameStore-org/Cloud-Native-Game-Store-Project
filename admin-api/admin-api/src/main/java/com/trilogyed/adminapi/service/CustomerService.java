@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Component
@@ -28,79 +29,115 @@ public class CustomerService {
 
 
     @Transactional
-    public CustomerViewModel saveCustomer(Customer customer){
-
-        customer=customerClient.createCustomer(customer);
+    public CustomerViewModel createCustomer(Customer customer)
+    {
+        customer = customerClient.createCustomer(customer);
         LevelUp levelUp = new LevelUp();
         levelUp.setCustomerId(customer.getCustomerId());
         levelUp.setPoints(0);
         levelUp.setMemberDate(LocalDate.now());
         levelUp = levelUpClient.createLevelUp(levelUp);
+        return buildCustomerViewModel(customer);
+    }
+
+    public CustomerViewModel getCustomer(Integer customerId){
+
+        Customer customer = customerClient.getCustomer(customerId);
 
         return buildCustomerViewModel(customer);
     }
 
-    public CustomerViewModel findCustomerById(int customerId){
+    public List<CustomerViewModel> getAllCustomers() {
 
-        Customer customer= customerClient.getCustomer(customerId);
-
-        return buildCustomerViewModel(customer);
-    }
-
-//    public List<Customer> getCustomerByName(String customerName){
-//
-//        List<Customer> customersByName=customerClient.getCustomerByName(customerName);
-//
-//        return customersByName;
-////    }
-////
-
-    public List<CustomerViewModel> getAllCustomers(){
-        List<CustomerViewModel> cvmList= new ArrayList<>();
-        List<Customer> customers= customerClient.getAllCustomers();
-
-        for (Customer customer : customers){
-
-            cvmList.add(buildCustomerViewModel(customer));
-        }
+        List<CustomerViewModel> cvmList = new ArrayList<>();
+        List<Customer> customers = customerClient.getAllCustomers();
+        customers.stream().forEach(customer ->
+        {
+            CustomerViewModel cvm = buildCustomerViewModel(customer);
+            cvmList.add(cvm);
+        });
         return cvmList;
     }
 
-    public void updateCustomer(int customerId, Customer customer){
+    public void updateCustomer(CustomerViewModel cvm){
 
-        customerClient.updateCustomer(customerId, customer);
-        int levelUpByCustomer = levelUpClient.getLevelUpPointsByCustomerId(customer.getCustomerId());
-
-
-
+        Customer customer = customerClient.getCustomer(cvm.getCustomerId());
+        customer.setFirstName(cvm.getFirstName());
+        customer.setLastName(cvm.getLastName());
+        customer.setStreet(cvm.getStreet());
+        customer.setCity(cvm.getCity());
+        customer.setZip(cvm.getZip());
+        customer.setEmail(cvm.getEmail());
+        customer.setPhone(cvm.getPhone());
+        customerClient.updateCustomer(customer.getCustomerId(),customer);
+        List<LevelUp> levelUpList = levelUpClient.getAllLevelUpsByCustomerId(customer.getCustomerId());
+        LevelUp levelUp = deleteExtraLevelUps(levelUpList);
+        levelUp.setPoints(cvm.getPoints());
+        levelUpClient.updateLevelUp(levelUp, levelUp.getLevelUpId());
     }
 
-    public void deleteCustomer(int customerId){
+    public void deleteCustomer(Integer customerId)
 
-        levelUpClient.deleteLevelUpByCustomerId(customerId);
+    {
+        levelUpClient.deleteLevelUp(customerId);
         customerClient.deleteCustomer(customerId);
+    }
+
+    public void deleteLevelUpByLevelUpId(Integer levelUpId){
+
+        levelUpClient.deleteLevelUp(levelUpId);
     }
 
     //helper method
 
     public CustomerViewModel buildCustomerViewModel(Customer customer)
     {
-        int levelUpByCustomer = levelUpClient.getLevelUpPointsByCustomerId(customer.getCustomerId());
+        if (customer==null) return null;
+        List<LevelUp> levelUpList = levelUpClient.getAllLevelUpsByCustomerId(customer.getCustomerId());
+        LevelUp levelUp = deleteExtraLevelUps(levelUpList);
 
-        LevelUp levelUp= levelUpClient.getLevelUpPointsByCustomerId(levelUpByCustomer);
+        CustomerViewModel cvm = new CustomerViewModel();
+        cvm.setCustomerId(customer.getCustomerId());
+        cvm.setFirstName(customer.getFirstName());
+        cvm.setLastName(customer.getLastName());
+        cvm.setStreet(customer.getStreet());
+        cvm.setCity(customer.getCity());
+        cvm.setZip(customer.getZip());
+        cvm.setEmail(customer.getEmail());
+        cvm.setPhone(customer.getPhone());
+        cvm.setLevelUpId(levelUp.getLevelUpId());
+        cvm.setPoints(levelUp.getPoints());
+        cvm.setMemeberDate(levelUp.getMemberDate());
+        return cvm;
+    }
 
-        CustomerViewModel customervm = new CustomerViewModel();
-        customervm.setCustomerId(customer.getCustomerId());
-        customervm.setFirstName(customer.getFirstName());
-        customervm.setLastName(customer.getLastName());
-        customervm.setStreet(customer.getStreet());
-        customervm.setCity(customer.getCity());
-        customervm.setZip(customer.getZip());
-        customervm.setEmail(customer.getEmail());
-        customervm.setPhone(customer.getPhone());
-        customervm.setLevelUpId(levelUp.getLevelUpId());
-        customervm.setPoints(levelUp.getPoints());
-        customervm.setMemeberDate(levelUp.getMemberDate());
-        return customervm;
+    // One customer can have only one points Id */
+
+    public LevelUp deleteExtraLevelUps(List<LevelUp> levelUpList){
+
+        Comparator<LevelUp> maximumId = Comparator.comparing(LevelUp::getLevelUpId);
+        Comparator<LevelUp> minimumMemberDate = Comparator.comparing((LevelUp::getMemberDate));
+
+        LevelUp maximumIdLevelUp = levelUpList.stream()
+                                                .max(maximumId)
+                                                .get();
+
+        LevelUp minMemberDateLevelUp = levelUpList.stream()
+                                                    .min(minimumMemberDate)
+                                                    .get();
+
+        maximumIdLevelUp.setMemberDate(minMemberDateLevelUp.getMemberDate());
+
+        for (LevelUp level: levelUpList)
+        {
+            if(level.getLevelUpId()!=maximumIdLevelUp.getLevelUpId())
+            {
+                maximumIdLevelUp.setPoints(maximumIdLevelUp.getPoints()+level.getPoints());
+                levelUpClient.deleteLevelUp(level.getLevelUpId());
+            }
+        }
+
+        levelUpClient.updateLevelUp(maximumIdLevelUp, maximumIdLevelUp.getLevelUpId());
+        return maximumIdLevelUp;
     }
 }

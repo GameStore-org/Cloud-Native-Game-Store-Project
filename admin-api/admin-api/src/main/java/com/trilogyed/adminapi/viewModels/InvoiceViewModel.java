@@ -2,6 +2,7 @@ package com.trilogyed.adminapi.viewModels;
 
 import com.trilogyed.adminapi.model.InvoiceItem;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,7 +10,7 @@ public class InvoiceViewModel {
 
     private int invoiceId;
     private int customerId;
-    private int purchaseDate;
+    private LocalDate purchaseDate;
     List<InvoiceItem> invoiceItemList;
 
     public int getInvoiceId() {
@@ -28,11 +29,11 @@ public class InvoiceViewModel {
         this.customerId = customerId;
     }
 
-    public int getPurchaseDate() {
+    public LocalDate getPurchaseDate() {
         return purchaseDate;
     }
 
-    public void setPurchaseDate(int purchaseDate) {
+    public void setPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 
@@ -51,7 +52,7 @@ public class InvoiceViewModel {
         InvoiceViewModel that = (InvoiceViewModel) o;
         return invoiceId == that.invoiceId &&
                 customerId == that.customerId &&
-                purchaseDate == that.purchaseDate &&
+                purchaseDate.equals(that.purchaseDate) &&
                 invoiceItemList.equals(that.invoiceItemList);
     }
 
@@ -60,3 +61,5 @@ public class InvoiceViewModel {
         return Objects.hash(invoiceId, customerId, purchaseDate, invoiceItemList);
     }
 }
+
+

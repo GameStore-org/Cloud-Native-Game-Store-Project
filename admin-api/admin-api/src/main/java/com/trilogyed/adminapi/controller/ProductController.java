@@ -2,6 +2,7 @@ package com.trilogyed.adminapi.controller;
 
 import com.trilogyed.adminapi.model.Product;
 import com.trilogyed.adminapi.service.ProductService;
+import com.trilogyed.adminapi.viewModels.ItemViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -34,41 +35,43 @@ public class ProductController {
     @CachePut(key = "#result.getProductId()")
     @RequestMapping(value = "/products", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public Product addProduct(@RequestBody @Valid Product product) {
-        return productService.saveProduct(product);
+    public ItemViewModel createProduct(@RequestBody @Valid ItemViewModel ivm){
+        return productService.createItem(ivm);
     }
 
     @Cacheable
     @RequestMapping(value = "/products/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public Product getProduct(@PathVariable int id) {
-        Product product = productService.findProductById(id);
+    public ItemViewModel findProductByProductId(@PathVariable(name = "productId") Integer productId){
+        ItemViewModel product = productService.findItemByProductId(productId);
         return product;
     }
 
     @CacheEvict(key = "#product.getProductId()")
     @RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateProduct(@PathVariable int id, @RequestBody @Valid Product product) {
-        if (product.getProductId() == 0)
-            product.setProductId(id);
-        if (id != product.getProductId()) {
+    public void updateProduct(@RequestBody @Valid ItemViewModel ivm){
+        if (ivm.getProductId() == 0)
+            ivm.setProductId(ivm.getProductId());
+        if (ivm.getProductId() != ivm.getProductId()) {
             throw new IllegalArgumentException("ID on path must match the ID in the Product object");
         }
-        productService.updateProduct(id, product);
+        productService.updateItemOrInventory(ivm);
     }
 
     @CacheEvict
     @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteProduct(@PathVariable int id) {
-        productService.deleteProduct(id);
+    public void deleteProduct(@PathVariable(name = "productId") Integer productId){
+
+        productService.deleteItem(productId);
     }
 
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    public List<ItemViewModel> getAllProducts() {
+
+        return productService.findAllItems();
     }
 
 }
