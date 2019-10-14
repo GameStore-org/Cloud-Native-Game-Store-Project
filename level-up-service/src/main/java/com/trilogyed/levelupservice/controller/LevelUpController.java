@@ -1,77 +1,79 @@
 package com.trilogyed.levelupservice.controller;
 
-import com.trilogyed.levelupservice.dao.LevelUpDao;
+import com.trilogyed.levelupservice.service.LevelUpService;
+import com.trilogyed.levelupservice.exception.NotFoundException;
 import com.trilogyed.levelupservice.model.LevelUp;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.cloud.client.ServiceInstance;
-//import org.springframework.cloud.client.discovery.DiscoveryClient;
-//import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-
 import java.util.List;
 
 @RestController
-//@RefreshScope
+@RefreshScope
 public class LevelUpController {
 
-    @Autowired
-    LevelUpDao dao;
+    /**
+    LevelUp methods are not cached because values change frequently
+     */
 
-    public LevelUpController(LevelUpDao dao){
-        this.dao = dao;
-    }
+    @Autowired
+    LevelUpService levelUpService;
 
     @RequestMapping(value = "/levelups", method = RequestMethod.POST)
-    @ResponseStatus(value = HttpStatus.CREATED)
-    public LevelUp createLevelUp(@RequestBody @Valid LevelUp levelUp) {
-
-        return dao.addLevelUp(levelUp);
+    @ResponseStatus(HttpStatus.CREATED)
+    public LevelUp addLevelUp(@RequestBody @Valid LevelUp levelUp) {
+        return levelUpService.addLevelUp(levelUp);
     }
 
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.GET)
-    @ResponseStatus(value = HttpStatus.OK)
+    @ResponseStatus(HttpStatus.OK)
     public LevelUp getLevelUp(@PathVariable int id) {
-        if (id < 1) {
-            throw new IllegalArgumentException("Id must be greater than 0.");
-        }
-        LevelUp levelUp = dao.getLevelUp(id);
-
+        LevelUp levelUp = levelUpService.getLevelUp(id);
+        if (levelUp == null)
+            throw new NotFoundException("LevelUp could not be retrieved for id " + id);
         return levelUp;
     }
 
-    @RequestMapping(value = "/levelups", method = RequestMethod.GET)
-    @ResponseStatus(value = HttpStatus.OK)
-    public List<LevelUp> getAllLevelUps() {
-
-        List<LevelUp> list = dao.getAllLevelUps();
-
-        return list;
-    }
-
-    @RequestMapping(value = "/levelups/customerId/{customerId}", method = RequestMethod.GET)
-    @ResponseStatus(value = HttpStatus.OK)
-    public List<LevelUp> getAllLevelUpsByCustomerId(@PathVariable int customerId){
-
-        List<LevelUp> list = dao.getAllLevelUpsByCustomerId(customerId);
-
-        return list;
-    }
-
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.PUT)
-    @ResponseStatus(value = HttpStatus.OK)
-    public void updateLevelUp(@RequestBody LevelUp levelUp, @PathVariable int id) {
-
-        dao.updateLevelUp(levelUp);
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateLevelUp(@PathVariable int id, @RequestBody @Valid LevelUp levelUp) {
+        if (levelUp.getLevelUpId() == 0)
+            levelUp.setLevelUpId(id);
+        if (id != levelUp.getLevelUpId()) {
+            throw new IllegalArgumentException("ID on path must match the ID in the LevelUp object");
+        }
+        levelUpService.updateLevelUp(levelUp);
     }
-
 
     @RequestMapping(value = "/levelups/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteLevelUp(@PathVariable int id) {
-
-        dao.deleteLevelUp(id);
+        levelUpService.deleteLevelUp(id);
     }
+
+
+    @RequestMapping(value = "/levelups", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public List<LevelUp> getAllLevelUps() {
+        List<LevelUp> levelUps = levelUpService.getAllLevelUps();
+        return levelUps;
+    }
+
+    /**
+    get levelup by customerId
+     */
+    @RequestMapping(value = "/levelups/customerId/{customerId}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public LevelUp getLevelUpByCustomerId(@PathVariable("customerId") int customerId) {
+        LevelUp levelUp = levelUpService.getLevelUpByCustomerId(customerId);
+        if (levelUp == null) {
+            throw new NotFoundException("Level up could not be retrieved for this customer.");
+        }
+        return levelUp;
+    }
+
 }
+
