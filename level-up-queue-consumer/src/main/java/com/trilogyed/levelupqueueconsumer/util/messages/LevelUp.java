@@ -1,25 +1,26 @@
-package com.trilogyed.levelupservice.model;
+package com.trilogyed.levelupqueueconsumer.util.messages;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class LevelUp {
 
     private int levelUpId;
-    @NotNull(message = "Please supply a customer id.")
-    @Positive
     private Integer customerId;
-    @NotNull(message = "Please supply points.")
     private Integer points;
-    @NotNull(message = "Please supply a member date.")
+    @JsonDeserialize(using = LocalDateDeserializer.class)
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate memberDate;
 
     public LevelUp() {
     }
 
-    public LevelUp(int levelUpId, int customerId, int points, LocalDate memberDate) {
+    public LevelUp(int levelUpId, Integer customerId, Integer points, LocalDate memberDate) {
         this.levelUpId = levelUpId;
         this.customerId = customerId;
         this.points = points;
@@ -34,15 +35,15 @@ public class LevelUp {
         this.levelUpId = levelUpId;
     }
 
-    public int getCustomerId() {
+    public Integer getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
     }
 
-    public int getPoints() {
+    public Integer getPoints() {
 
         if (points == null) {
             return 0;
@@ -50,7 +51,7 @@ public class LevelUp {
         return points;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(Integer points) {
         this.points = points;
     }
 
@@ -69,9 +70,9 @@ public class LevelUp {
         if (o == null || getClass() != o.getClass()) return false;
         LevelUp levelUp = (LevelUp) o;
         return getLevelUpId() == levelUp.getLevelUpId() &&
-                getCustomerId() == levelUp.getCustomerId() &&
-                getPoints() == levelUp.getPoints() &&
-                getMemberDate().equals(levelUp.getMemberDate());
+                Objects.equals(getCustomerId(), levelUp.getCustomerId()) &&
+                Objects.equals(getPoints(), levelUp.getPoints()) &&
+                Objects.equals(getMemberDate(), levelUp.getMemberDate());
     }
 
     @Override
