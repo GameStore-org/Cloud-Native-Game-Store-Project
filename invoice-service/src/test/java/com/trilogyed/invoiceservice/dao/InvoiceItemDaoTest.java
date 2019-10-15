@@ -134,7 +134,5 @@ public class InvoiceItemDaoTest {
 
         assertEquals(item, item2);
 
-
-
     }
 }

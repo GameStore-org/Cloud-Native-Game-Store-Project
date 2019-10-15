@@ -12,12 +12,11 @@ import javax.validation.Valid;
 @RestController
 public class InvoiceController {
 
-    // Injection
     @Autowired
     ServiceLayer service;
 
 
-    //creating invoice uri
+    //creating invoice
     @RequestMapping(value = "/invoices", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public InvoiceViewModel createInvoice(@RequestBody InvoiceViewModel invoice){
@@ -25,7 +24,7 @@ public class InvoiceController {
         return  service.createInvoice(invoice);
     }
 
-    //getting invoice by id uri
+    //getting invoice by id
     @RequestMapping(value = "/invoices/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public InvoiceViewModel getInvoice(@PathVariable("id") int invoiceId){
@@ -43,19 +42,20 @@ public class InvoiceController {
         if (ivm.getInvoiceId() == 0)
             ivm.setInvoiceId(invoiceId);
         if (invoiceId != ivm.getInvoiceId()) {
-            throw new IllegalArgumentException("ID on path must match the ID in the Invoice object");
+            throw new IllegalArgumentException("Please enter a valid invoice Id.");
         }
         service.updateInvoice(ivm, invoiceId);
 
-        //allows you to confirm invoice has been updated
+        //confirms invoice has been updated
         return getInvoice(invoiceId);
     }
 
     //delete invoice by id
     @RequestMapping(value = "invoices/{id")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteInvoice(@PathVariable("id") int id){
+    @ResponseStatus(HttpStatus.OK)
+    public String deleteInvoice(@PathVariable("id") int id){
         service.deleteInvoice(id);
+        return "Invoice deleted.";
     }
 
 }
