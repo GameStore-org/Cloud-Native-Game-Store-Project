@@ -2,18 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9871711-62f2-4ac8-be36-39a549236877" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/controller/ControllerExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/controller/LevelUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/dao/LevelUpDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/model/LevelUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/CustomerServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/CustomerServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/CustomerServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/ServiceLayerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoice-service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/invoice-service.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level-up-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/level-up-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/ServiceLayerApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/game-store/target/" />
     <ignored path="$PROJECT_DIR$/invoice-service/target/" />
     <ignored path="$PROJECT_DIR$/level-up-service/target/" />
+    <ignored path="$PROJECT_DIR$/inventory-service/target/" />
+    <ignored path="$PROJECT_DIR$/customer-service/target/" />
+    <ignored path="$PROJECT_DIR$/product-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,19 +34,64 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceItemDao.java">
+        <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/controller/InventoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+            <state relative-caret-position="-110">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2283#2284#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/controller/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/CustomerServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="852">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -41,29 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/InvoiceItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="1254">
+              <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,13 +109,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/Invoice.java">
+        <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/service/ServiceLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="-116">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#750#751#0" expanded="true" />
+                <element signature="e#787#788#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/ProductServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -88,10 +144,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Kotlin File" />
-        <option value="Class" />
+        <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,36 +157,63 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/InvoiceServiceApplication.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/model/Invoice.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/model/InvoiceItem.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/Invoice.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao2/InvoiceDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/exception/NotFoundException.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/ExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/test/resources/application.properties" />
-        <option value="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoTest.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/viewModel/InvoiceItemViewModel.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/resources/schema.sql" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/resources/bootstrap.properties" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/service/InvoiceServiceLayer.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/Invoice.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/InvoiceItem.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/viewModel/InvoiceViewModel.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoJdbcImpl.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/service/ServiceLayerTest.java" />
-        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java" />
         <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/service/ServiceLayer.java" />
         <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceDao.java" />
         <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceItemDao.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/resources/schema.sql" />
+        <option value="$PROJECT_DIR$/invoice-service.properties" />
+        <option value="$PROJECT_DIR$/inventory-service.properties" />
+        <option value="$PROJECT_DIR$/invoice-service/src/test/resources/application.properties" />
+        <option value="$PROJECT_DIR$/inventory-service/src/test/resources/application.properties" />
+        <option value="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoTest.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/model/Inventory.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/dao/InventoryDao.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/exception/NotFoundException.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/controller/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/service/ServiceLayer.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/test/java/com/trilogyed/inventoryservice/service/ServiceLayerTest.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/service/ServiceLayer.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/exception/NotFoundException.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/model/Product.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/dao/ProductDaoTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/dao/ProductDaoJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/dao/ProductDaoTest.java" />
+        <option value="$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/service/ServiceLayerTest.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/exception/NotFoundException.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/service/ServiceLayer.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/service/ServiceLayerTest.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/controller/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/resources/schema.sql" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/customer-service/src/test/resources/application.properties" />
+        <option value="$PROJECT_DIR$/product-service/src/main/resources/bootstrap.properties" />
+        <option value="$PROJECT_DIR$/product-service/src/test/resources/application.properties" />
+        <option value="$PROJECT_DIR$/product-service/src/main/resources/schema.sql" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/controller/CustomerController.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/dao/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/dao/CustomerDaoJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/model/Customer.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/dao/CustomerDaoTest.java" />
+        <option value="$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/InventoryServiceApplication.java" />
+        <option value="$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/test/java/com/trilogyed/inventoryservice/dao/InventoryDaoTest.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/dao/InventoryDaoJdbcTemplateImpl.java" />
+        <option value="$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/controller/InventoryController.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/ProductServiceApplication.java" />
+        <option value="$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/CustomerServiceApplication.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
-    <option name="width" value="892" />
+    <option name="width" value="1775" />
     <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -141,7 +224,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,42 +234,53 @@
             <path>
               <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="invoiceservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="customerservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cloud-Native-Game-Store-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cloud-Native-Game-Store-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="customer-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="customerservice" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -195,26 +288,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoice-service/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/product-service/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.trilogyed.invoiceservice.service" />
+      <recent name="com.trilogyed.customerservice.service" />
+      <recent name="com.trilogyed.customerservice.dao" />
+      <recent name="com.trilogyed.productservice.service" />
+      <recent name="com.trilogyed.productservice.dao" />
+      <recent name="com.trilogyed.inventoryservice.service" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="com.trilogyed.invoiceservice.dao" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.trilogyed.invoiceservice" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\invoice-service\src\main\resources" />
-      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\invoice-service\src\test" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.trilogyed.invoiceservice.dao" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\product-service\src\main\resources" />
+      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\product-service\src\test" />
+      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\customer-service\src\main\resources" />
+      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\customer-service\src\test" />
+      <recent name="C:\Users\OTIS\Desktop\Cloud-Native-Game-Store-Project\inventory-service\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,7 +328,54 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InvoiceItemDaoTest">
+  <component name="RunManager" selected="JUnit.InventoryDaoTest">
+    <configuration name="InventoryDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.inventoryservice.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.inventoryservice.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.inventoryservice.dao.InventoryDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryDaoTest.createGetDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.inventoryservice.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.inventoryservice.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.inventoryservice.dao.InventoryDaoTest" />
+      <option name="METHOD_NAME" value="createGetDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryDaoTest.getAllInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trilogyed.inventoryservice.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trilogyed.inventoryservice.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.trilogyed.inventoryservice.dao.InventoryDaoTest" />
+      <option name="METHOD_NAME" value="getAllInventory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InvoiceDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="invoice-service" />
       <extension name="coverage">
@@ -262,8 +408,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InvoiceItemDaoTest" />
+        <item itemvalue="JUnit.InventoryDaoTest" />
+        <item itemvalue="JUnit.InventoryDaoTest.getAllInventory" />
+        <item itemvalue="JUnit.InventoryDaoTest.createGetDelete" />
         <item itemvalue="JUnit.InvoiceDaoTest" />
+        <item itemvalue="JUnit.InvoiceItemDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -281,35 +430,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InvoiceDaoTest - 2019.10.10 at 14h 53m 52s.xml">
+    <history-entry file="InvoiceItemDaoTest_updateInvoiceItem - 2019.10.11 at 08h 51m 05s.xml">
+      <configuration name="InvoiceItemDaoTest.updateInvoiceItem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InvoiceItemDaoTest - 2019.10.11 at 08h 52m 07s.xml">
+      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InvoiceItemDaoTest - 2019.10.11 at 08h 55m 56s.xml">
+      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InvoiceItemDaoTest - 2019.10.11 at 08h 59m 34s.xml">
+      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InvoiceDaoTest - 2019.10.14 at 13h 07m 18s.xml">
       <configuration name="InvoiceDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceDaoTest - 2019.10.10 at 14h 56m 00s.xml">
+    <history-entry file="InvoiceDaoTest - 2019.10.14 at 13h 09m 34s.xml">
       <configuration name="InvoiceDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceDaoTest - 2019.10.10 at 14h 57m 49s.xml">
-      <configuration name="InvoiceDaoTest" configurationId="JUnit" />
+    <history-entry file="InventoryDaoTest_createGetDelete - 2019.10.14 at 13h 36m 32s.xml">
+      <configuration name="InventoryDaoTest.createGetDelete" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 15h 19m 49s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    <history-entry file="InventoryDaoTest_getAllInventory - 2019.10.14 at 13h 41m 27s.xml">
+      <configuration name="InventoryDaoTest.getAllInventory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 15h 25m 30s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    <history-entry file="InventoryDaoTest - 2019.10.14 at 14h 42m 56s.xml">
+      <configuration name="InventoryDaoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 20h 27m 57s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 20h 30m 41s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 20h 35m 45s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 20h 40m 31s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="InvoiceItemDaoTest - 2019.10.10 at 20h 41m 40s.xml">
-      <configuration name="InvoiceItemDaoTest" configurationId="JUnit" />
+    <history-entry file="InventoryDaoTest - 2019.10.14 at 15h 10m 44s.xml">
+      <configuration name="InventoryDaoTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -324,9 +473,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Job Explorer" order="6" />
       <window_info id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="8" visible="true" weight="0.25015366" />
+      <window_info active="true" content_ui="combo" id="Project" order="8" visible="true" weight="0.21081746" />
       <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32947233" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -334,7 +483,7 @@
       <window_info anchor="bottom" id="DB Execution Console" order="5" weight="0.32947233" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.19433719" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.11969112" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -357,9 +506,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Job Explorer" order="6" />
       <window_info id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="8" visible="true" weight="0.25015366" />
+      <window_info content_ui="combo" id="Project" order="8" weight="0.39704978" />
       <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Messages" order="0" visible="true" weight="0.32947233" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -367,7 +516,7 @@
       <window_info anchor="bottom" id="DB Execution Console" order="5" weight="0.32947233" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.19433719" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.039011702" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -383,271 +532,400 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/LevelUpServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/InvoiceServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/dao/ProductDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="352">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/Invoice.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/pom.xml">
+    <entry file="file://$PROJECT_DIR$/product-service/src/test/java/com/trilogyed/productservice/service/ServiceLayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="374">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/exception/NotFoundException.java">
+    <entry file="file://$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/ServiceLayerApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="286">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/ExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/dao/ProductDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="330">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/resources/bootstrap.properties.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/dao/ProductDaoJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="58" selection-end-line="3" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="86" column="12" lean-forward="true" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/viewModel/InvoiceItemViewModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state relative-caret-position="266">
+          <caret line="69" column="13" lean-forward="true" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#791#792#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/controller/ExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/test/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/resources/bootstrap.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="63" selection-start-column="63" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/invoice-service/src/main/resources/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state relative-caret-position="374">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/resources/bootstrap.properties">
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/resources/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/viewModel/InvoiceViewModel.java">
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/service/ServiceLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+        <state relative-caret-position="704">
+          <caret line="32" column="31" lean-forward="true" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game-store/src/main/java/com/trilogyed/gamestore/model/Invoice.java">
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/dao/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="132">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/service/ServiceLayerTest.java">
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/exception/NotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/service/ServiceLayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="129" column="43" lean-forward="true" selection-start-line="129" selection-start-column="43" selection-end-line="129" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/service/ServiceLayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3347#3348#0" expanded="true" />
-            <element signature="e#3389#3390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceDaoJdbcImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+        <state relative-caret-position="101">
+          <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game-store/src/main/java/com/trilogyed/gamestore/model/Product.java">
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/InvoiceServiceApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="132">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game-store/src/main/java/com/trilogyed/gamestore/controller/GameStoreController.java">
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/InventoryServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1755#1756#0" expanded="true" />
-            <element signature="e#1782#1783#0" expanded="true" />
-            <element signature="e#1952#1953#0" expanded="true" />
-            <element signature="e#1979#1980#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game-store/src/main/java/com/trilogyed/gamestore/model/InvoiceItem.java">
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/InvoiceServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        <state relative-caret-position="110">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java">
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/test/java/com/trilogyed/invoiceservice/dao/InvoiceDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="-582">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceItemDaoJdbcImpl.java">
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/viewModel/InventoryViewModel.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/dao/CustomerDaoJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="2090">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceItemDao.java">
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/dao/InventoryDaoJdbcTemplateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/InvoiceItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/model/Invoice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="18" lean-forward="true" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level-up-service/src/main/java/com/trilogyed/levelupservice/dao/LevelUpDao.java">
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/dao/InventoryDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/test/java/com/trilogyed/customerservice/dao/CustomerDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/test/java/com/trilogyed/inventoryservice/dao/InventoryDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/model/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/dao/InvoiceDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="88">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/exception/NotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/controller/ExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1738">
+          <caret line="79" selection-start-line="18" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/exception/NotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/service/ServiceLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product-service/src/main/java/com/trilogyed/productservice/ProductServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invoice-service/src/main/java/com/trilogyed/invoiceservice/controller/InvoiceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory-service/src/main/java/com/trilogyed/inventoryservice/controller/InventoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2283#2284#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/controller/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer-service/src/main/java/com/trilogyed/customerservice/CustomerServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>

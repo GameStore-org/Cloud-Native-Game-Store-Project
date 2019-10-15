@@ -32,7 +32,7 @@ public class InvoiceDaoTest {
 
     @Test
     public void createGetDelete() {
-        //create
+        //create-
         Invoice inv = new Invoice();
         inv.setCustomerId(1);
         inv.setPurchaseDate(LocalDate.of(2019, 12, 12));
