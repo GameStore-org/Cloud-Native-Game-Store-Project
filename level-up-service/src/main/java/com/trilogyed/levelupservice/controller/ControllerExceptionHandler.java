@@ -49,14 +49,6 @@ public class ControllerExceptionHandler {
         return responseEntity;
     }
 
-    @ExceptionHandler(value = {NumberFormatException.class})
-    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    public ResponseEntity<VndErrors> numberFormatException(NumberFormatException e, WebRequest request) {
-        VndErrors error = new VndErrors(request.toString(), "Parameter must be a whole number. " + e.getMessage());
-        ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(error, HttpStatus.UNPROCESSABLE_ENTITY);
-        return responseEntity;
-    }
-
     @ExceptionHandler(value = {NotFoundException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<VndErrors> notFoundException(NotFoundException e, WebRequest request) {
@@ -64,4 +56,5 @@ public class ControllerExceptionHandler {
         ResponseEntity<VndErrors> responseEntity = new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
         return responseEntity;
     }
+
 }
